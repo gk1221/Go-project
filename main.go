@@ -1,16 +1,12 @@
 package main
 
-import "fmt"
-
-
+//go run main.go deck.go
 func main() {
 	
-	card := []string{"ACe", newCard()}
+	card := deck{"ACe", newCard()}
 	card = append(card, "CAAA")
 	
-	for i, card := range card {
-		fmt.Println(i, card)
-	}
+	card.print()
 }
 
 func newCard() string {
